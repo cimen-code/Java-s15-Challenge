@@ -46,3 +46,65 @@ Bütün sistemi bir konsol uygulaması olarak dizayn etmelisiniz.(Scanner sını
 * Sistemden bir kitap alındığında kitabı alan kullanıcıya bir fatura kesilmelidir. Kitabı geri iade ettiğinde kullanıcıya ücreti geri iade edilmelidir.
 * Kullanıcıların 5 kitap limiti olmalı ve bu kitap limitine ulaştıklarında daha fazla kitap alamamalılar.  
  
+
+
+---
+
+# Implemented Solution
+
+This fork implements the Library System as a Java 17 console application.
+
+## Features
+
+- Add, update and delete books
+- Search books by ID, title and author
+- List books by category and author
+- Borrow and return books
+- Track which member currently holds a book
+- Prevent a borrowed book from being borrowed again
+- Create an invoice when a book is borrowed
+- Refund the invoice when the book is returned
+- Enforce a maximum of five active books per member
+- Keep loan history
+
+## OOP and Collections
+
+The project demonstrates encapsulation, inheritance, abstraction, interfaces, polymorphism and composition.
+It also uses `List`, `Set` and `Map` for different data-management requirements.
+
+The implementation contains 13 classes, plus enums and an interface, so it exceeds the challenge requirement of at least 10 classes.
+
+See [DESIGN.md](DESIGN.md) for the class diagram and design decisions.
+
+## Run
+
+The project uses Java 17.
+
+### IntelliJ IDEA
+
+Open the project and run:
+
+- `src/Main.java` for the interactive console application.
+- `src/com/workintech/library/app/Demo.java` for the deterministic presentation demo
+
+### Terminal
+
+Compile:
+
+```bash
+rm -rf out
+mkdir -p out
+javac -d out $(find src -name '*.java')
+```
+
+Run the interactive console:
+
+```bash
+java -cp out Main
+```
+
+Run the presentation demo:
+
+```bash
+java -cp out com.workintech.library.app.Demo
+```
